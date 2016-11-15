@@ -22,8 +22,8 @@ def calculate_force(body, space_objects):
         sin = deltay / r
         cos = deltax / r
         F = (gravitational_constant * body.m * obj.m) / (r ** 2)
-        body.Fx += F * cos  # FIXME: нужно вывести формулу...
-        body.Fy += F * sin  # FIXME: нужно вывести формулу...
+        body.Fx += F * cos  # FIXed
+        body.Fy += F * sin  # FIXed
 
 
 def move_space_object(body, dt):
@@ -33,10 +33,10 @@ def move_space_object(body, dt):
     """
 
     ax = body.Fx/body.m
-    body.x += ax*(dt**2)/2+body.Vx*dt # FIXME: не понимаю как менять...
+    body.x += ax*(dt**2)/2+body.Vx*dt # FIXed
     body.Vx += ax*dt
     ay = body.Fy/body.m
-    body.y += ay*(dt**2)/2+body.Vy*dt # FIXME: не понимаю как менять...
+    body.y += ay*(dt**2)/2+body.Vy*dt # FIXed
     body.Vy += ay*dt
     # FIXME: not done recalculation of y coordinate!
 
